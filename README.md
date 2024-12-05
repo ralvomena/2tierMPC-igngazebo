@@ -27,15 +27,13 @@ Se estiver utilizando computadores/máquinas virtuais diferentes para o lado da 
 ros2 run demo_nodes_cpp talker # o que fala
 ros2 run demo_nodes_py listener # o que escuta
 ````
-
-
-3. Apenas no computador/máquina virtual do lado local, instalar o Gazebo seguindo as instruções deste [link](https://gazebosim.org/docs/citadel/install_ubuntu/).
-4. Apenas no computador/máquina virtual do lado local, instalar os pacotes de integração do Gazebo e ROS 2 Foxy Fitzroy executando os comandos:
+3. Instalar o CasADi para Python seguindo as instruções deste [link](https://web.casadi.org/get/).
+4. Apenas no computador/máquina virtual do lado local, instalar o Gazebo seguindo as instruções deste [link](https://gazebosim.org/docs/citadel/install_ubuntu/).
+5. Apenas no computador/máquina virtual do lado local, instalar os pacotes de integração do Gazebo e ROS 2 Foxy Fitzroy executando os comandos:
 ```
 sudo apt-get install ros-foxy-ros-ign-gazebo
 sudo apt-get install ros-foxy-ros-ign-bridge
 ```
-5. Instalar o CasADi para Python seguindo as instruções deste [link](https://web.casadi.org/get/).
 
 ## Preparação dos pacotes do lado da borda
 
@@ -68,6 +66,8 @@ colcon build --packages-select local_tier_pkg --symlink-install
 colcon build --packages-select local_launch --symlink-install
 echo "source /caminho_ate_o_diretorio/local/install/setup.bash" >> ~/.bashrc
 ````
+
+Lembrando que a execução do colcon com o symlink-install não é obrigatória, é apenas para facilitar no caso da necessidade de editar o código e executá-lo novamente sem precisar reconstruir o pacote.
 
 ## Inicialização dos nós
 
@@ -136,8 +136,13 @@ construí-los novamente para que a alteração no código tenha efeito.
 
 2. Para inicializar os nós dos outros cenários, apenas altere o número do comando do launch file. 
 Por exemplo, para o cenário 2, os comandos da borda e do lado local são os seguintes:
+
+* Local
 ````
 ros2 launch edge_launch edge.scn_2.launch.py
+````
+* Borda
+````
 ros2 launch local_launch scn_2.launch.py
 ros2 launch local_launch local_2_all.launch.py
 ````
