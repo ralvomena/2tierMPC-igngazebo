@@ -10,7 +10,7 @@ As simulações foram validadas com o sistema operacional, ferramentas e pacotes
 
 ## Instalação das ferramentas no Ubuntu
 
-A instalação das ferramentas é feita em dois computadores/máquinas virtuais, uma representando a borda e a outra o lado local, ou apenas em um computador/máquina virtual.
+A instalação das ferramentas é feita em dois computadores/máquinas virtuais, uma representando o lado da borda e a outra o lado local, ou apenas em um computador/máquina virtual.
 
 1. Instalar o ROS 2 seguindo as instruções deste [link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html).
 2. Para que os comandos do ROS 2 se tornem acessíveis, execute no terminal:
@@ -20,6 +20,14 @@ echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 É necessário executar o comando acima uma única vez após a instalação do ROS 2. 
 Veja mais detalhes neste 
 [link](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html).
+
+Se estiver utilizando computadores/máquinas virtuais diferentes para o lado da borda e o lado local, você pode testar a comunicação do ROS 2 executando um nó que "fala" em uma lado e um nó que "escuta" do outro lado, executando:
+
+````
+ros2 run demo_nodes_cpp talker # o que fala
+ros2 run demo_nodes_py listener # o que escuta
+````
+
 
 3. Instalar o Gazebo seguindo as instruções deste [link](https://gazebosim.org/docs/citadel/install_ubuntu/).
 4. Instalar os pacotes de integração do Gazebo e ROS 2 Foxy Fitzroy executando os comandos:
