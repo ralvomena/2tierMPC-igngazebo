@@ -21,7 +21,7 @@ echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 Veja mais detalhes neste 
 [link](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html).
 
-Se estiver utilizando computadores/máquinas virtuais diferentes para o lado da borda e o lado local, você pode testar a comunicação do ROS 2 executando um nó que "fala" em uma lado e um nó que "escuta" do outro lado, executando:
+Se estiver utilizando computadores/máquinas virtuais diferentes para o lado da borda e o lado local, você pode testar a comunicação do ROS 2 executando um nó que "fala" em um lado e um nó que "escuta" do outro lado, executando:
 
 ````
 ros2 run demo_nodes_cpp talker # o que fala
@@ -29,15 +29,15 @@ ros2 run demo_nodes_py listener # o que escuta
 ````
 
 
-3. Instalar o Gazebo seguindo as instruções deste [link](https://gazebosim.org/docs/citadel/install_ubuntu/).
-4. Instalar os pacotes de integração do Gazebo e ROS 2 Foxy Fitzroy executando os comandos:
+3. Apenas no computador/máquina virtual do lado local, instalar o Gazebo seguindo as instruções deste [link](https://gazebosim.org/docs/citadel/install_ubuntu/).
+4. Apenas no computador/máquina virtual do lado local, instalar os pacotes de integração do Gazebo e ROS 2 Foxy Fitzroy executando os comandos:
 ```
 sudo apt-get install ros-foxy-ros-ign-gazebo
 sudo apt-get install ros-foxy-ros-ign-bridge
 ```
 5. Instalar o CasADi para Python seguindo as instruções deste [link](https://web.casadi.org/get/).
 
-## Preparação dos pacotes da borda
+## Preparação dos pacotes do lado da borda
 
 1. Abra um terminal no diretório /edge disponibilizado e execute o comando:
 ```
@@ -53,7 +53,7 @@ colcon build --packages-select edge_launch --symlink-install
 ```
 
 
-4. Para que os pacotes construídos também se tornem acessíveis, execute o comando abaixo, 
+3. Para que os pacotes construídos também se tornem acessíveis, execute o comando abaixo, 
 colocando o caminho até o diretório /edge:
 ````
 echo "source /caminho_ate_o_diretorio/edge/install/setup.bash" >> ~/.bashrc
@@ -61,9 +61,7 @@ echo "source /caminho_ate_o_diretorio/edge/install/setup.bash" >> ~/.bashrc
 
 ## Preparação dos pacotes do lado local
 
-1. Nas simulações realizadas para os resultados da tese, os pacotes da borda e do lado local 
-foram executados em dois computadores diferentes, conectados em rede cabeada. Para a preparação 
-dos pacotes no lado local, a mesma sequência de comandos deve ser executada, portanto, no mesmo ou em outro computador, a partir do diretório /local:
+1. Nas simulações realizadas para os resultados da tese, os pacotes da borda e do lado local foram executados em dois computadores diferentes, conectados em rede cabeada. Para a preparação dos pacotes no lado local, a mesma sequência de comandos deve ser executada, portanto, no mesmo ou em outro computador, a partir do diretório /local:
 ````
 colcon build
 colcon build --packages-select local_tier_pkg --symlink-install
