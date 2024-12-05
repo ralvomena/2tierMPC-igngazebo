@@ -1,0 +1,9 @@
+__init__.py
+__pycache__/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+build/
+install/
+log/
