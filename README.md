@@ -137,11 +137,11 @@ construí-los novamente para que a alteração no código tenha efeito.
 2. Para inicializar os nós dos outros cenários, apenas altere o número do comando do launch file. 
 Por exemplo, para o cenário 2, os comandos da borda e do lado local são os seguintes:
 
-* Local
+* Borda
 ````
 ros2 launch edge_launch edge.scn_2.launch.py
 ````
-* Borda
+* Local
 ````
 ros2 launch local_launch scn_2.launch.py
 ros2 launch local_launch local_2_all.launch.py
