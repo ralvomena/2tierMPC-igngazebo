@@ -12,7 +12,7 @@ As simulações foram validadas com o sistema operacional, ferramentas e pacotes
 
 A instalação das ferramentas é feita em dois computadores/máquinas virtuais, uma representando o lado da borda e a outra o lado local, ou apenas em um computador/máquina virtual.
 
-1. Instalar o ROS 2 seguindo as instruções deste [link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html).
+1. Instalar o ROS 2 seguindo as instruções deste [link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) (incluindo o ros-dev-tools).
 2. Para que os comandos do ROS 2 se tornem acessíveis, execute no terminal:
 ```
 echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
