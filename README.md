@@ -77,12 +77,8 @@ sendo o mesmo procedimento para os demais. No computador que representa a borda,
 ros2 launch edge_launch edge.scn_1.launch.py
 ````
 Esse launch file irá executar quatro nós de MPC para planejamento da trajetória, dado os quatro 
-AGVs do cenário, além do nó do Supervisor e sua interface gráfica. Caso deseje executar o nó do 
-Supervisor em outro terminal, desabilite as linhas de código do respectivo launch file que 
-inicializam o nó do Supervisor e execute no outro terminal:
-````
-ros2 run edge_tier_pkg supervisor
-`````
+AGVs do cenário, além do nó do Supervisor e sua interface gráfica.
+
 2. No lado local são executados dois launch files. O primeiro executará o Gazebo e lançará os 
 componentes que compõem o cenário, como AGVs e obstáculos. O segundo executará os quatro nós 
 do MPC de rastreamento da trajetória. Em terminais diferentes, execute cada um dos comandos a seguir:
