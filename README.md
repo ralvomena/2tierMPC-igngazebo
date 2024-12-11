@@ -87,7 +87,8 @@ ros2 launch local_launch scn_1.launch.py
 ros2 launch local_launch local_1_all.launch.py
 ````
 Após a abertura do Gazebo, clique no botão laranja no canto inferior esquerdo (play) para que o Gazebo
-inicie os tópicos do ROS e esteja preparado para a simulação.
+inicie os tópicos do ROS e esteja preparado para a simulação. Neste momento o Supervisor detecta e 
+registra os quatro AGVs da simulação.
 
 Se preferir, instale o Terminator e tenha vários terminais em uma única janela. Detalhes da 
 instalação estão neste [link](https://www.geeksforgeeks.org/terminator-a-linux-terminal-emulator/).
