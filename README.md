@@ -93,12 +93,6 @@ registra os quatro AGVs da simulação.
 Se preferir, instale o Terminator e tenha vários terminais em uma única janela. Detalhes da 
 instalação estão neste [link](https://www.geeksforgeeks.org/terminator-a-linux-terminal-emulator/).
 
-Nas simulações para os resultados da tese foi utilizada uma máquina virtual para cada AGV no 
-computador do lado local, de modo a representar o computador embarcado no AGV de uma aplicação real. 
-No caso do Cenário 1, um total de cinco máquinas virtuais foram utilizadas, sendo uma de cada AGV e 
-uma para o Gazebo. Nessa situação foi criado um launch file para cada máquina virtual, o qual 
-executava um nó de MPC para o respectivo AGV.
-
 ## Interface gráfica do Supervisor
 
 ![Supervisor GUI](supervisor_gui.png)
