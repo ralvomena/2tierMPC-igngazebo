@@ -176,7 +176,7 @@ a obtenção da solução do MPC quanto à prevenção de colisões.
 2. Alguns parâmetros ajustados nos launch files do lado local são também as prioridades e as 
 velocidades. Em especial no Cenário 4, defina a quantidade de AGVs em números pares a serem lançados 
 na simulação.  Isso é feito através da variável n nos launch files local_4_all.launch.py e 
-scn_4.launch.py. Nas simulações para os resultados da tese foram utilizados 12 AGVs.
+scn_4.launch.py. Nas simulações para os resultados da tese foram utilizados no máximo 12 AGVs.
 
 ## Documentos relacionados
 
